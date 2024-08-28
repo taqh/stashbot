@@ -2,7 +2,8 @@
   "name": "spade",
   "scripts": {
     "dev": "tsx watch src/index.ts",
-    "reg:commands": "tsx src/register-commands.ts"
+    "reg:commands": "tsx src/register-commands.ts",
+    "build": "echo \"No build step necessary\""
   },
   "dependencies": {
     "@hono/node-server": "^1.12.1",
