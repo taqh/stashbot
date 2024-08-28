@@ -1,0 +1,20 @@
+{
+  "name": "spade",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "reg:commands": "tsx src/register-commands.ts"
+  },
+  "dependencies": {
+    "@hono/node-server": "^1.12.1",
+    "discord.js": "^14.15.3",
+    "dotenv": "^16.4.5",
+    "hono": "^4.5.9",
+    "openai": "^4.56.1",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.17",
+    "tsx": "^4.7.1"
+  },
+  "packageManager": "pnpm@9.7.0+sha512.dc09430156b427f5ecfc79888899e1c39d2d690f004be70e05230b72cb173d96839587545d09429b55ac3c429c801b4dc3c0e002f653830a420fa2dd4e3cf9cf"
+}
