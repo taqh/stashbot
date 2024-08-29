@@ -1,10 +1,9 @@
 import { CommandInteraction, SlashCommandBuilder } from 'discord.js';
-import OpenAI from 'openai';
 import config from '../config';
+import { GoogleGenerativeAI } from '@google/generative-ai';
 
-const openai = new OpenAI({
-  apiKey: config.OPENAI_API_KEY,
-});
+const genAI = new GoogleGenerativeAI(config.GOOGLE_API_KEY);
+const MAX_MESSAGE_LENGTH = 1900;
 
 export const command = {
   data: new SlashCommandBuilder()
@@ -29,15 +28,10 @@ export const command = {
     }
 
     try {
-      const response = await openai.chat.completions.create({
-        model: 'gpt-3.5-turbo', 
-        messages: [
-          { role: 'system', content: 'You are a helpful assistant.' },
-          { role: 'user', content: prompt },
-        ],
-      });
-
-      const aiResponse = response.choices[0].message.content;
+      // GEMINI
+      const model = genAI.getGenerativeModel({ model: 'gemini-1.5-flash' });
+      const result = await model.generateContent(prompt);
+      const aiResponse = result.response.text();
 
       await interaction.editReply({
         content: `Your prompt: ${prompt}\n\nAI response: ${aiResponse}`,
