@@ -10,6 +10,10 @@ app.get('/', (c) => {
   return c.text('Thanks for using Spade🤖');
 });
 
+app.get('/check', (c) => {
+  return c.json({ status: 'ok' }, 200);
+});
+
 app.post('/notify', async (c) => {
   console.log('🤖 Received a server notification request');
 
@@ -25,7 +29,7 @@ app.post('/notify', async (c) => {
   }
 });
 
-const port = 3000;
+const port = Number(process.env.PORT) || 3000;
 console.log(`Server is running on ${port}`);
 
 serve({
