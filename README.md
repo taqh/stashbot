@@ -19,7 +19,7 @@ Discord bot for the [Quillstash](https://discord.gg/3uUpbr8F) server.
 1. Clone the repository
 
    ```sh
-   git clone https://github.com/taqh/spade.git
+   git clone https://github.com/taqh/stash-bot.git
    ```
 
 2. Install NPM packages
