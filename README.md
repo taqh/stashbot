@@ -1,6 +1,6 @@
-# Spade
+# StashBot
 
-Discord bot for the [Spade](https://discord.gg/3uUpbr8F) server.
+Discord bot for the [Quillstash](https://discord.gg/3uUpbr8F) server.
 
 ## Features
 
