@@ -25,7 +25,7 @@ export async function sendNotification(blogPost: expectedDataShape) {
     return;
   }
 
-  const message = `@everyone ${blogPost.author} Put up a new post titled: "${blogPost.title}", \n\n lets support them and Check it out \n\n link: ${blogPost.url} \n\n Cheers🥂`;
+  const message = `@everyone ${blogPost.author} Put up a new post \n\n let's support them and Check it out \n\n link: ${blogPost.url} \n\n Cheers🥂`;
 
   try {
     await channel.send(message);
